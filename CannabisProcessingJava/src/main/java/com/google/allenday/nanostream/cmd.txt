@@ -1,0 +1,15 @@
+--project=cannabis-3k
+--runner=DataflowRunner
+--inputCsvUri="gs://cannabis-3k/Cannabis Genomics - 201703 - SRA.csv"
+--workerMachineType=n1-highmem-4
+--maxNumWorkers=50
+--diskSizeGb=100
+--srcBucket=cannabis-3k
+--resultBucket=cannabis-3k-results
+--referenceNamesList="AGQN03","LKUA01","LKUB01","MNPR01","MXBD01","QKVJ02","QVPT02","UZAU01"
+--allReferencesDirGcsUri="gs://cannabis-3k/reference/"
+--alignedOutputDir="cannabis_processing_output/%s/result_aligned_bam/"
+--sortedOutputDir="cannabis_processing_output/%s/result_sorted_bam/"
+--mergedOutputDir="cannabis_processing_output/%s/result_merged_bam/"
+--anomalyOutputPath="cannabis_processing_output/%s/anomaly_examples"
+--memoryOutputLimit=0
